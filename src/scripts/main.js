@@ -83,7 +83,7 @@ container.addEventListener('click', (e) => {
 });
 
 function appendRow() {
-  const newRow = field.insertRow(field.rows.length - 1);
+  const newRow = field.insertRow();
 
   const cellsToAdd = field.rows[0].cells.length;
 
@@ -106,7 +106,7 @@ function appendColumn() {
 
 function removeColumn() {
   const cellsToDelete = field.rows.length;
-  const lastCell = field.rows[0].length - 1;
+  const lastCell = field.rows[0].cells.length - 1;
 
   for (let i = 0; i < cellsToDelete; i++) {
     field.rows[i].deleteCell(lastCell);
